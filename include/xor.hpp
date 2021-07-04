@@ -4,7 +4,7 @@
 #include <array>
 #include <algorithm>
 
-namespace Xor {
+namespace Xor_ {
         template<std::size_t S>
         struct Xor_String {
             std::array<char, S> chars;
@@ -27,4 +27,4 @@ namespace Xor {
         };
 }
 
-#define Xor(string) [](){ static auto _ = Xor::Xor_String<sizeof(string)/sizeof(char)>{string}; return _(); }();
+#define Xor(string) [](){ static auto _ = Xor_::Xor_String<sizeof(string)/sizeof(char)>{string}; return _(); }();
